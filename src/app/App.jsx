@@ -11,7 +11,6 @@ import { ACCESS_TOKEN } from '../constants';
 
 import Home from '../home/Home';
 import Login from '../user/login/Login';
-import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import AppHeader from '../components/AppHeader';
 import LoadingIndicator from '../components/Loading';
@@ -104,7 +103,6 @@ class App extends Component {
                 </Route>
                 <Route path="/login" 
                   render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
-                <Route path="/signup" component={Signup}></Route>
                 <Route path="/users/:username" 
                   render={(props) => <Profile isAuthenticated={this.state.isAuthenticated} currentUser={this.state.currentUser} {...props}  />}>
                 </Route>
